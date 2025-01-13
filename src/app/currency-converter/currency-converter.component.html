@@ -1,0 +1,26 @@
+<div *ngIf="rates" [@fadeIn]>
+  <h2>Currency Conversion Example</h2>
+  <label>
+    Select Currency to Convert From:
+    <select (change)="currencyChange()" [(ngModel)]="currencyFrom" >
+      <option *ngFor="let currency of currencyKeys" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+  </label>
+  <label>
+    Enter Amount:
+    <input type="number" [(ngModel)]="amount" />
+  </label>
+  <label>
+    Select Currency:
+    <select [(ngModel)]="selectedCurrency">
+      <option *ngFor="let currency of currencyKeys" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+  </label>
+  <div *ngIf="amount" [@fadeIn]>
+    <p>Converted Price: {{ amount | currencyFormatter: rates[selectedCurrency] : selectedCurrency }}</p>
+  </div>
+</div>

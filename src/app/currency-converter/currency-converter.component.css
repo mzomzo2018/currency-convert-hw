@@ -1,0 +1,75 @@
+
+div {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background-color: #f9f9f9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+
+   h2 {
+     color: #333;
+     text-align: center;
+     font-size: 2em;
+     animation: colorChange 2s infinite;
+   }
+
+
+
+   label {
+     display: block;
+     margin: 10px 0;
+     color: #666;
+     font-size: 1.1em;
+     animation: slideIn 0.5s ease-in-out;
+   }
+
+
+
+   input, select {
+     width: 100%;
+     padding: 10px;
+     margin-top: 5px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     background-color: #fff;
+     font-size: 1em;
+     animation: grow 0.3s ease-in-out;
+   }
+
+
+
+   p {
+     margin: 10px 0;
+     font-size: 1.2em;
+     color: #555;
+     animation: fadeIn 1s ease-in-out;
+   }
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes colorChange {
+  0% { color: #333; }
+  50% { color: #ff6347; }
+  100% { color: #333; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes grow {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
+}
